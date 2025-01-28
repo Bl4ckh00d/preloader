@@ -2,9 +2,13 @@
 <html lang='en'>
 <head>
     <title> Loader example </title>
+    <div>
+    <div class='pre-loader'>
+        <img class='loading-gif' alt='loading' src="https://media0.giphy.com/media/11FuEnXyGsXFba/source.gif"/>
+    </div>
     <style>
         .loading-gif {
-            max-width: 500px;
+            max-width: fit-content;
         }
 
         .pre-loader {
@@ -21,30 +25,30 @@
         }
 
         .pre-loader.hidden {
-            animation: fadeOut 2s; /** change to 1s */
+            animation: fadeOut 10s; /** change to 1s */
             animation-fill-mode: forwards;
         }
 
         @keyframes fadeOut {
             100% {
-                opacity: 0;
+                opacity: 100;
                 visibility: hidden;
             }
         }
     </style>
-</head>
-<body>
-<!--- Your content goes here -->
-<p>Page content</p>
-<div class='pre-loader'>
-    <img class='loading-gif' alt='loading' src="https://media0.giphy.com/media/11FuEnXyGsXFba/source.gif"/>
-</div>
-
-<!-- js to hide preloader loading is done -->
+    <!-- js to hide preloader loading is done -->
 <script type='text/javascript'>
     window.addEventListener('load', function () {
         document.querySelector('.pre-loader').className += ' hidden';
     });
 </script>
+    </div>
+</head>
+
+
+
+<body>
+<!--- Your content goes here -->
+<p>Page content</p>
 </body>
-</html>
+</html>s
